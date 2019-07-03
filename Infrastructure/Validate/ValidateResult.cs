@@ -12,7 +12,7 @@ namespace Infrastructure.Validate
         {
             Messages = new List<string>();
         }
-        public bool IsValid { get; set; }
+        public bool IsValid { get { return Messages.Count <= 0; } }
 
         public List<string> Messages { get; set; }
     }

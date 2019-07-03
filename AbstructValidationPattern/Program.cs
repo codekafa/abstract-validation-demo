@@ -21,7 +21,20 @@ namespace AbstructValidationPattern
             {
                 Console.WriteLine(item);
             }
-            Console.WriteLine("");
+
+
+
+            Console.WriteLine("*************");
+
+
+            p.ProductName = "Product Two";
+            result = p.IsValid();
+
+            foreach (var item in result.Messages)
+            {
+                Console.WriteLine(item);
+            }
+
             Console.Read();
         }
 
